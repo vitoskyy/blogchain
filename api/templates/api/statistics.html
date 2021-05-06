@@ -1,0 +1,28 @@
+{% extends 'api/base.html' %}
+{% load static %}
+{% block title %}
+Statistics
+{% endblock %}
+{% block content %}
+{% if user.is_superuser %}
+<div class="back">
+<h1 class="welcome">BENVENUTO ALLE STATISTICHE</h1>
+<div class="posts">
+{% for user in userPosts %}
+
+    <div class="msg">
+        <div class="row">
+            <div class="coln">
+                <img src="{% static 'images/usericon.png' %}" id="userimg"/>
+                    <span> {{ user.username }} </span>
+                </div>
+            <div class="coln">
+                <p> <b> Post pubblicati: </b> {{ user.total_posts }} </p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+    {% endif %}
+</div>
+{% endblock %}

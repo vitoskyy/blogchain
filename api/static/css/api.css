@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Helvetica";
+  }
+  body
+  {
+	  background-color: #f0eee9;
+	  padding-bottom: 150px;
+  }
+
+  .position-relative{
+   position: relative;
+  }
+
+h1{
+margin-top:0;
+margin-bott:30px;
+padding-top: 15px;
+color: #34c0eb;
+font-weight: 600;
+}
+div
+ {
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+ }
+
+.page-header {
+     background-color: #ffffff ;
+     margin-top: 0;
+     padding: 10px 16px;
+     overflow: hidden;
+     width: 80%;
+     text-align: center;
+     margin: auto;
+     position:relative;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border: 0px;
+
+}
+
+.page-header-fixed{
+position: fixed;
+z-index: 100;
+background-color: transparent;
+margin-left: 10%;
+}
+
+.page-header a {
+    display: block;
+    max-width: 20%;
+    color: #34c0eb;
+    text-align: center;
+    padding: 7px 16px;
+    margin: 7px 3px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all .200s;
+}
+.page-header a:hover
+{
+  transform: scale(1.1);
+}
+#blocktitle{
+ font-family: "Lobster";
+ color: #ffffff;
+ background-color: #34c0eb;
+
+ text-align: center;
+ display: inline-block;
+ font-weight: bold;
+ margin-top: 0px;
+ padding: 10px;
+ margin-right: auto;
+ margin-left: auto;
+ border-radius: 3px;
+}
+
+#home{
+float: left;
+}
+#logoutbt
+{
+float: right;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 80%;
+  background-color: white;
+  margin: auto;
+
+}
+
+
+.save {
+text-align:center;
+     }
+
+  /* poost container */
+.posts {
+     display: block;
+     margin-bottom: 16px;
+     padding-right: 50px;
+     padding-left: 50px;
+     text-align : center;
+     padding-top: 20px;
+}
+  /* Post appearence */
+.msg
+{
+border-radius: 5px;
+background-color: #ffffff;
+box-shadow: 0 0 15px #333333;
+padding-top: 10px;
+}
+
+.datep {
+color: #999fa3;
+}
+.msg span
+{
+color: #34c0eb;
+font-weight: 600;
+}
+.msg h3{
+color: black;
+font-weight: 600;
+}
+.coln{
+    display: flex;
+	flex-direction: column;
+	width:40%;
+	margin-left:20px;
+	margin-right:20px;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    width: 100%;
+	justify-content: center;
+	padding-bottom: 10px;
+
+}
+#userimg{
+max-width:75px;
+}
+
+.hmessage {
+position:fixed;
+margin-top: 500px;
+}
+
+.homebts
+{
+position: absolute;
+border-radius: 25px;
+width: 50%;
+}
+
+.post h2 a, .post h2 a:visited {
+     color: #000000;
+}
+  /* Form container */
+  label{
+  color:white;
+  }
+
+[id^="hint_id"]{
+    color:#fffffd;
+}
+
+.form-container {
+   position: absolute;
+   max-width: 500px;
+   display: inline-block;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   background-color: transparent;
+}
+p {
+margin-top: 5px;
+}
+
+  /* Ip text */
+.ip
+{
+  position: absolute;
+  bottom: 0;
+  left: 16;
+  display: inline-block;
+  text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+  color: white;
+
+
+}
+  /* New Post dynamic footer */
+.footer
+{
+  position: fixed;
+  display: block;
+  bottom:0;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 80%;
+  height: 20%;
+  background-color: #163d55;
+  border-radius: 15px;
+  box-shadow: 0 0 3px #34c0eb;
+  color: black;
+  text-align: center;
+}
+
+.footer:hover , .footer:focus-within
+{
+height:60%;
+}
+
+.footer h3
+{
+color: #34c0eb;
+font-size: 25pt;
+}
+  /* Button to LogOut */
+.postform
+{
+width:50%;
+min-width: 300px;
+margin:auto;
+
+}
+#bg {
+  /* Full width */
+   width: 100%;
+   position: relative;
+  /* Center and scale the image nicely */
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 90%;
+}
+
+#bc {
+  /* Full width*/
+  width: 100%;
+  margin:auto;
+
+  /* Center and scale the image nicely */
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 90%;
+}
+
+
+.mybt
+{
+ position: center;
+ font-size: 18pt;
+ margin-top: 15px;
+ margin-bottom: 15px;
+ border-radius: 25px;
+}
+.mybt:hover, .mybt:hover span
+{
+background-color: #34c0eb;
+color: white
+}
+.dac{
+background-color: #ffffff;
+padding: 5px 5px 5px 5px;
+border-radius: 25px;
+}
+
+.back{
+ background-image: url("../images/blog-background.jpg");
+ /* Full height */
+  width:80%;
+  min-height: 100%;
+  align-items: center;
+
+  right: 0;
+  left: 0;
+  margin: auto;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*opacity: 90%;*/
+  z-index: -1;
+}
+
+.welcome {
+    color: white;
+}

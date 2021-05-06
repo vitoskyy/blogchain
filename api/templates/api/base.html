@@ -1,0 +1,27 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/api.css' %}">
+ <title>{% block title%} {% endblock %}</title>
+</head>
+<body>
+
+
+    <div class="page-header">
+        <a href="/" id="home"><h1 id="blocktitle">Blogchain</h1></a>
+        {% if user.is_authenticated %}
+       <a href="/logout" id="logoutbt">Logout</a>
+      {% endif %}
+    </div>
+             {% block content %}
+             {% endblock %}
+
+
+</body>
+</html>

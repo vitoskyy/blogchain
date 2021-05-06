@@ -1,0 +1,42 @@
+{% extends 'api/base.html' %}
+{% load static %}
+{% block title %}
+Feed
+{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="back">
+       {% for post in posts %}
+                <div class="posts">
+                    <div class="msg">
+                       <div class="row">
+                        <div class="coln">
+                            <img src="{% static 'images/usericon.png' %}" id="userimg"/>
+                            <span> {{ post.user.username}} </span>
+                            <p class="datep">{{ post.datetime }}</p>
+                        </div>
+                      <div class="coln">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.content }}</p>
+                      </div>
+                       </div>
+                    </div>
+                </div>
+            {% endfor %}
+           {% if user.is_authenticated %}
+    </div>
+   <div class="footer">
+
+     <div class="postform">
+        <form method="POST" >
+            <button type="submit" class="btn mybt">Pubblica ora!<span class="fa fa-paper-plane-o"></span></button>
+            {% csrf_token %}
+            {{form|crispy}}
+
+        </form>
+     </div>
+  </div>
+
+   {%endif%}
+{% endblock %}

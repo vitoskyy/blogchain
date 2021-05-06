@@ -1,0 +1,41 @@
+{% extends 'api/base.html' %}
+{% load static %}
+    {% block content %}
+<div class="back">
+    <h1 class="welcome">BENVENUTO ALLA PAGINA UTENTI</h1>
+
+    <div class="posts">
+    <div class="msg">
+        <div class="row">
+            <div class="coln">
+                <img src="{% static 'images/usericon.png' %}" id="userimg"/>
+                            <span> {{ user.username }} </span>
+                        </div>
+            <div class="coln">
+                <p> <b> Nome: </b> {{ user.first_name }}</p>
+                <p> <b> Cognome: </b> {{ user.last_name }}</p>
+                <p> <b> Post pubblicati: </b> {{ user_posts_number }} </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% for post in user_posts %}
+                <div class="posts">
+                    <div class="msg">
+                       <div class="row">
+                        <div class="coln">
+                            <img src="{% static 'images/usericon.png' %}" id="userimg"/>
+                            <span> {{ post.user.username}} </span>
+                            <p class="datep">{{ post.datetime }}</p>
+                        </div>
+                      <div class="coln">
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.content }}</p>
+                      </div>
+                       </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+</div>
+{% endblock %}

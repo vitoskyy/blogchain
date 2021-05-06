@@ -1,0 +1,31 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/api.css' %}">
+</head>
+<body>
+<div class="page-header page-header-fixed">
+        <a id="home"></a>
+        {% if user.is_authenticated %}
+       <a href="/logout" id="logoutbt" style="color:white;">Logout</a>
+      {% endif %}
+</div>
+<section>
+   <img style="filter: brightness(20%);" src="{% static 'images/blogchain_homepage.JPG' %}" id="bc" alt="background">
+<div class="form-container">
+  <form method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+     <p><a href="/register">Non hai un account? Creane uno qui!</a> </p>
+    <button type="submit" class="btn btn-success">Accedi</button>
+
+  </form>
+</div>
+
+</section>
+</body>
