@@ -118,7 +118,7 @@ def handle_login(request):
     return render(request, "registration/login.html", {"form": form})
 
 
-# La seguente funzione gestisce il login nella piattaforma
+# La seguente funzione gestisce il logout dalla piattaforma
 def handle_logout(request):
     logout(request)
     messages.info(request, "Logout effettuato correttamente")
